@@ -1,6 +1,0 @@
-No dns entry for ucatt-mt.iii.com 
-The DNS resolution of ucatt.iii.com is 34.253.109.92 from 10.128.129.25 
-No dns entry for ucatt.iii.com 
-The DNS resolution of ucatt-db.iii.com is 34.252.82.230 from 10.128.129.25 
-No dns entry for ucatt-db.iii.com 
-No dns entry for ucatt-encore.iii.com 
