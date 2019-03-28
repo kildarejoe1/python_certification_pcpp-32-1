@@ -6,6 +6,7 @@ import dns.resolver
 import json
 
 
+
 #Define the inputs
 tiers= {"App": "" , "DB" : "-db", "Encore" : "-encore" , "MT" : "-mt"} #Tiers of sitecode I should query - I will use a dict
 domain=".iii.com" #Domain that looking for Records for.
@@ -49,15 +50,13 @@ def set_resolver(dns_resolver):
     my_resolver.nameservers = [dns_resolver]
     return my_resolver
 
-def main():
-    sitecode=str(raw_input("Enter a sitcode: "))
+def main(sitecode):
     resolutions={}
     for resolver in Resolvers:
         my_resolver=set_resolver(resolver)
         data=resolve_fqdn_records(my_resolver,resolver,sitecode,resolutions)
     with open(sitecode+".json", "w") as f:
         json.dump(data, f)
-    print "Created json file"
+    return data
 
-
-main()
+#Now create Sanity check functions, that checks the data collected - to perform useful task.
